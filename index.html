@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="app-header">
+      <h1>Pomodoro Timer(Sim Javier)</h1>
+      <p class="app-subtitle">Focus sessions with work and break cycles.</p>
+    </header>
+
+    <section class="timer-card">
+      <div class="progress-ring" aria-label="Pomodoro progress">
+        <svg class="progress-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle class="progress-background" cx="100" cy="100" r="90" />
+          <circle class="progress-circle" cx="100" cy="100" r="90" />
+        </svg>
+        <div class="timer-display">
+          <span id="mode-label">Work</span>
+          <span id="time-label">00:30</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="start-button" type="button">Start</button>
+        <button id="pause-button" type="button" disabled>Pause</button>
+        <button id="resume-button" type="button" disabled>Resume</button>
+        <button id="reset-button" type="button">Reset</button>
+      </div>
+    </section>
+
+    <section class="status-panel">
+      <div class="session-info">
+        <span class="session-label">Sessions completed</span>
+        <span id="session-count">0</span>
+      </div>
+      <div class="cat-icon" aria-hidden="true">🐱</div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
